@@ -1,0 +1,51 @@
+.menu-main{
+	display: flex;
+	background-color: #F3D9D9;
+	margin: 20px;
+	padding: 20px;
+	border: 2px solid #EC9E9E;
+
+}
+.img-menu img{
+	width: 100px;
+	border-radius: 20px;
+}
+.img-menu{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.info-menu{
+	margin-top: 30px;
+}
+.info-menu>*{
+	margin: 20px;
+}
+.price-name{
+	display: flex;
+	font-weight: bold;
+}
+@media screen and (max-width:550px) {
+	.menu-main{
+		flex-direction: column;
+	}
+	.text-menu{
+		margin-top: 30px;
+		margin-left: 0px;
+	
+	}
+	
+}
+.button-order{
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #ea7f7f;
+	border: none;
+	color: white;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.button-order:hover{
+	background-color: #c54b4b;
+
+}
