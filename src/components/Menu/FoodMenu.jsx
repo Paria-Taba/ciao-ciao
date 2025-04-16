@@ -8,7 +8,7 @@ function FoodMenu(props){
 			<div className="text-menu">
 				<div className="price-name">
 				<p>{props.name}</p>
-				<p>{props.price}</p></div>
+				<p>{props.price} SEK</p></div>
 				<div className="info-menu">
 				<p>{props.description}</p>
 				<p>{props.ingredients.join( " , " )}</p></div>

@@ -1,6 +1,7 @@
 import "../Main-start/Main.css"
 import Ciao from "../../assets/images/ciao.jpg"
 import "../../pages/Home/Home.css"
+import { NavLink } from "react-router-dom"
 
 function Main(){
 	return(
@@ -17,7 +18,7 @@ function Main(){
 		
 	</div>
 	<div className="main-button">
-	<button>Gå till menu</button>
+	<NavLink to="/menu">Gå till menu</NavLink>
 	</div>
 
 </div>

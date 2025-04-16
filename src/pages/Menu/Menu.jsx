@@ -3,6 +3,7 @@ import "../Menu/Menu.css"
 import FoodMenu from "../../components/Menu/FoodMenu"
 import {menuDishes,desserts,drinks} from "../../data/data.js"
 import { useState } from "react";
+import Footer from "../../components/Footer/Footer.jsx";
 function Menu(){
 	const[menuType,setMenyType]=useState("menuDishes")
 	let currentMenu;
@@ -45,7 +46,7 @@ function Menu(){
     ) : null
   }
 </div>
-		
+		<Footer></Footer>
 		
 		</div>
 	)

@@ -38,9 +38,7 @@ function Header(){
 		{showMenu &&(<div className="navbar">
 			<NavLink to="/">Home</NavLink>
 			<NavLink to="/menu">Menu</NavLink>
-			<NavLink to="/aboutus">About us</NavLink>
-			<NavLink to="login">Login</NavLink>
-			<NavLink to="contact">contact</NavLink>
+			<NavLink to="/login">Login</NavLink>
 			</div>)}
 			
 			

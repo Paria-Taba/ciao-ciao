@@ -21,14 +21,16 @@
 	align-items: center;
 	
 }
-.main-button button{
+.main-button a{
 	background-color: #F3D9D9;
 	border-radius: 10px;
 	padding: 20px;
 	border: none;
+color: black;
+	text-decoration: none;
 	
 }
-.main-button button:hover{
+.main-button a:hover{
 	 background-color:  #EC9E9E;
 	 cursor: pointer;
 }
