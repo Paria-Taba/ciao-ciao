@@ -1,0 +1,26 @@
+.menu h1{
+	padding: 10px;
+
+}
+.menu-title{
+	display: flex;
+	float: left;
+}
+.menu-span span{
+	padding: 10px;
+	background-color:  #F3D9D9;
+	margin: 10px;
+	border-radius: 30px;
+}
+.menu-span{
+	margin-top: 20px;
+}
+.menu-span span:hover{
+	background-color: #EC9E9E;
+}
+@media screen and (max-width: 400px){
+	.menu-title{
+		display: flex;
+		flex-direction: column;
+	}
+}

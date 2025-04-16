@@ -1,0 +1,21 @@
+.footer{
+	margin-top: 20px;
+display: flex;
+	background-color: #F3D9D9;
+	padding: 10px;
+}
+.footer div{
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	
+}
+@media screen and (max-width: 700px){
+	.footer{
+		display: flex;
+		flex-direction: column;
+	}
+	.footer div{
+		margin-bottom: 30px;
+	}
+}

@@ -1,0 +1,39 @@
+.main h1{
+	padding: 10px;
+}
+.main-intro img{
+	width: 330px;
+	border-radius: 10px;
+}
+.main-intro{
+	display: flex;
+	padding: 20px;
+}
+.main-text{
+	background-color:  #F3D9D9;
+	padding: 10px;
+	border-radius: 10px;
+	margin-left: 20px;
+}
+.main-button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.main-button button{
+	background-color: #F3D9D9;
+	border-radius: 10px;
+	padding: 20px;
+	border: none;
+	
+}
+.main-button button:hover{
+	 background-color:  #EC9E9E;
+	 cursor: pointer;
+}
+@media screen and (max-width: 400px){
+	.main-intro img{
+		width: 250px;
+	}
+  } 

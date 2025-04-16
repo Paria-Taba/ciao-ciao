@@ -1,0 +1,99 @@
+.logo img{
+width: 100px;
+border-radius: 100%;
+}
+.logo-part{
+	background-color: #F3D9D9;
+}
+.login img{
+	width: 60px;
+	margin-left: 20px;
+	float: right;
+	border-radius: 10px;
+}
+.header-img{
+	padding: 10px;
+	background-color: #F3D9D9; ;
+	display: flex;
+	
+}
+.navbar{
+	margin-top: 20px;
+	display: flex;
+}
+.navbar>a{
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+	text-decoration: none;
+	width: 80px;
+	color: black;
+}
+.navbar>a:hover{
+	background-color: #EC9E9E;
+	color: white;
+	border-radius: 10px;
+}
+.active{
+	color: red;
+}
+.ham-menu{
+	display: none;
+}
+.ham-menu img{
+	margin-top: 10px;
+	width:40px;
+	border-radius: 10px;
+}
+
+.ham-design{
+	display: flex;
+	flex-direction: column;
+background-color: #234332;
+position: absolute;
+	top: 50px;
+	left: 70%;
+	top: 20%;
+	border-radius: 10px;
+}
+.ham-design>*{
+	text-decoration: none;
+	color: white;
+	padding: 5px;
+	width: 80px;
+}
+.ham-design>*:hover{
+	background-color: #CAE3D5 ;
+	color: black;	
+	padding: 10px;
+	border-radius: 10px;
+
+}
+
+@media screen and (max-width: 700px) {
+
+
+.login img{
+	width: 40px;
+	float: left;
+	margin-left: 2px;
+}
+.ham-menu{
+	margin-bottom: 20px;
+	display: block;
+}
+.ham-menu img{
+float: right;
+	
+}
+.main-intro{
+	display: flex;
+	flex-direction: column;
+}
+.main-intro>*{
+	margin: 10px;
+}
+
+  }
+  
+  

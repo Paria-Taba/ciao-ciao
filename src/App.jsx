@@ -1,0 +1,31 @@
+
+import { HashRouter,Routes,Route } from 'react-router-dom'
+import './App.css'
+import Home from './pages/Home/Home'
+import Contact from './pages/Contact/Contact'
+import About from './pages/Aboutus/Aboutus'
+import Login from './pages/Login/Login'
+import Menu from './pages/Menu/Menu'
+
+function App() {
+	
+	return (
+		<HashRouter>
+		<Routes>
+		<Route path='/' element={<Home></Home>}></Route>		 
+		<Route path='/contact' element={<Contact></Contact>}></Route>		
+		<Route path='/aboutus' element={<About></About>}></Route>		     
+		<Route path='/login' element={<Login></Login>}></Route>		       
+		<Route path='/menu' element={<Menu></Menu>}></Route>		       
+
+  
+       
+
+
+		</Routes>
+		</HashRouter>
+		
+	)
+}
+
+export default App
