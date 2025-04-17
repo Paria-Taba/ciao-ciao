@@ -35,3 +35,6 @@
 .button-inlog button:hover{
 	background-color: #f7d5d5;
 }
+.error-message{
+	color: red;
+}
