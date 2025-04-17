@@ -6,6 +6,7 @@ import { useState } from "react";
 import Footer from "../../components/Footer/Footer.jsx";
 function Menu(){
 	const[menuType,setMenyType]=useState("menuDishes")
+	const[cart,setCart]=useState([])
 	let currentMenu;
 	if (menuType === "menuDishes") {
 		currentMenu = menuDishes;
@@ -13,6 +14,9 @@ function Menu(){
 		currentMenu = drinks;
 	} else if (menuType === "desserts") {
 		currentMenu = desserts;
+	}
+	function addCart(item){
+		setCart([...cart,item])
 	}
 	
 	return(
@@ -26,6 +30,7 @@ function Menu(){
 		</div>
 		<div className="shop-icon">
 					<i class="fas fa-shopping-cart"></i>
+					<span className="cart-icon">{cart.length}</span>
 		</div>
 
 
@@ -33,15 +38,15 @@ function Menu(){
   {
     menuType === "menuDishes" ? (
       menuDishes.map(item => (
-        <FoodMenu key={item.id} {...item} />
+        <FoodMenu key={item.id} {...item} onAddToCart={()=>addCart(item)}/>
       ))
     ) : menuType === "drinks" ? (
       drinks.map(item => (
-        <FoodMenu key={item.id} {...item} />
+        <FoodMenu key={item.id} {...item} onAddToCart={()=>addCart(item)} />
       ))
     ) : menuType === "desserts" ? (
       desserts.map(item => (
-        <FoodMenu key={item.id} {...item} />
+        <FoodMenu key={item.id} {...item} onAddToCart={()=>addCart(item)} />
       ))
     ) : null
   }

@@ -38,3 +38,22 @@
 .error-message{
 	color: red;
 }
+.red-style{
+	border: 2px solid red;
+
+}
+.green-style{
+	border: 2px solid green;
+}
+@media screen and (max-width:700px) {
+
+	.form input{
+	
+	width: 80%;
+}
+.form{
+	
+	margin: 30px ;
+	
+} 
+}

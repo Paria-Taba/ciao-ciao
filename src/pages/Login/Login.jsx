@@ -21,6 +21,12 @@ function Login(){
 		email:"",
 		tel:""
 	}
+	let classForm={
+		name:"",
+		email:"",
+		tel:""
+
+	}
 	const result=schema.validate(data)
 	console.log(result)
 
@@ -29,18 +35,26 @@ if (result.error){
 			const field=item.context.key
 			if(field==="name"){
 				message.name="du måste skriva ditt namn mellan 2 and 10"
+				classForm.name="red-style"
 
+			}else{
+				classForm.name="green-style"
 			}
 			if(field==="email"){
 				message.email="du måste skriva ditt email på rätt sätt"
+				classForm.email="red-style"
+			}else{
+				classForm.email="green-style"
 			}
 			if(field==="tel"){
 				message.tel="please write your phone number"
+				classForm.tel="red-style"
+			}else{
+				classForm.tel="green-style"
 			}
 		})
 	}
-	
-	
+	const visible=!result.error
 	return(
 		<div>
 			<Header></Header>
@@ -48,23 +62,23 @@ if (result.error){
 			<div className="form">
 				<div>
 					<label htmlFor="namn">Namn:</label>
-                      <input type="text" id="namn"  onChange={(e) => setData({ ...data, name: e.target.value })} value={data.name}/>
+                      <input type="text" id="namn"  onChange={(e) => setData({ ...data, name: e.target.value })} value={data.name} className={classForm.name}/>
 					  <p className="error-message">{message.name}</p>
 				</div>
 				<div>
 					<label htmlFor="email">E-mail:</label>
-                      <input type="text" id="email" onChange={(e) => setData({ ...data, email: e.target.value })} value={data.email}/>
+                      <input type="text" id="email" onChange={(e) => setData({ ...data, email: e.target.value })} value={data.email} className={classForm.email}/>
 					  <p className="error-message">{message.email}</p>
 				</div>
 				<div>
 					<label htmlFor="tel">Telefon:</label>
-                      <input type="text" id="tel" onChange={(e) => setData({ ...data, tel: e.target.value })} value={data.tel} />
+                      <input type="text" id="tel" onChange={(e) => setData({ ...data, tel: e.target.value })} value={data.tel} className={classForm.tel}/>
 					  <p className="error-message">{message.tel}</p>
 				</div>
 				
 			</div>
 			<div className="button-inlog">
-				<button >Gå till inlogning</button>
+				<button disabled={!visible}>Gå till inlogning</button>
 			</div>
 			<Footer></Footer>
 		</div>

@@ -44,7 +44,8 @@ function Header(){
 			
 			
 			<div className="login">
-			<img src={login} alt="login" />
+<NavLink to="/login"><img src={login} alt="login" />
+	</NavLink>
 			{showHam && (
 				<div className="ham-menu">
 				<img src={hamMenu} alt="hamber-menu" onMouseOver={()=>setOpenHam(true)} />
