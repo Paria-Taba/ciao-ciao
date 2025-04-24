@@ -17,7 +17,7 @@ function FoodMenu(props){
 				<p>{props.ingredients.join( " , " )}</p></div>
 			
 			</div>
-			<div><button className="button-order" onClick={props.onAddToCart}>Add to order</button></div>
+			<div><button className="button-order" onClick={props.onAdd}>Add to order</button></div>
 
 		</div>
 	)

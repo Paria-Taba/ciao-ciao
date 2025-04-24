@@ -4,9 +4,17 @@ import FoodMenu from "../../components/Menu/FoodMenu"
 import {menuDishes,desserts,drinks} from "../../data/data.js"
 import { useState } from "react";
 import Footer from "../../components/Footer/Footer.jsx";
+import { useCartStore } from "../../data/CartStore.js";
+import { NavLink } from "react-router-dom";
+
+
 function Menu(){
 	const[menuType,setMenyType]=useState("menuDishes")
-	const[cart,setCart]=useState([])
+	const cart = useCartStore((state) => state.cart)
+
+	const addItem=useCartStore(state=>state.addItem)
+
+	
 	let currentMenu;
 	if (menuType === "menuDishes") {
 		currentMenu = menuDishes;
@@ -15,9 +23,10 @@ function Menu(){
 	} else if (menuType === "desserts") {
 		currentMenu = desserts;
 	}
-	function addCart(item){
-		setCart([...cart,item])
-	}
+function addHandler(item){
+	addItem(item)
+	console.log(cart)
+}
 	
 	return(
 		<div className="menu">
@@ -29,7 +38,8 @@ function Menu(){
 		<span onClick={()=>setMenyType("desserts")}>Desert</span></div>
 		</div>
 		<div className="shop-icon">
-					<i class="fas fa-shopping-cart"></i>
+			<NavLink to="/basket">	<i className="fas fa-shopping-cart"></i></NavLink>
+				
 					<span className="cart-icon">{cart.length}</span>
 		</div>
 
@@ -38,15 +48,15 @@ function Menu(){
   {
     menuType === "menuDishes" ? (
       menuDishes.map(item => (
-        <FoodMenu key={item.id} {...item} onAddToCart={()=>addCart(item)}/>
+        <FoodMenu key={item.id} {...item} onAdd={()=>addHandler(item)}/>
       ))
     ) : menuType === "drinks" ? (
       drinks.map(item => (
-        <FoodMenu key={item.id} {...item} onAddToCart={()=>addCart(item)} />
+        <FoodMenu key={item.id} {...item} onAdd={()=>addHandler(item)}/>
       ))
     ) : menuType === "desserts" ? (
       desserts.map(item => (
-        <FoodMenu key={item.id} {...item} onAddToCart={()=>addCart(item)} />
+        <FoodMenu key={item.id} {...item}  onAdd={()=>addHandler(item)}/>
       ))
     ) : null
   }
